@@ -52,14 +52,6 @@ jobs:
                   {"identifier": "linux-release", "os": "ubuntu-22.04", "name": "\U0001f427 Linux Release", "runner": "self-hosted", "target": "template_release", "platform": "linux", "arch": "x86_64"},
                   {"identifier": "linux-arm64-debug", "os": "ubuntu-22.04", "name": "\U0001f427 Linux ARM64 Debug", "target": "template_debug", "platform": "linux", "arch": "arm64"},
                   {"identifier": "linux-arm64-release", "os": "ubuntu-22.04", "name": "\U0001f427 Linux ARM64 Release", "target": "template_release", "platform": "linux", "arch": "arm64"},
-                  {"identifier": "linux-rv64-debug", "os": "ubuntu-22.04", "name": "\U0001f427 Linux RISC-V 64-bit Debug", "target": "template_debug", "platform": "linux", "arch": "rv64"},
-                  {"identifier": "linux-rv64-release", "os": "ubuntu-22.04", "name": "\U0001f427 Linux RISC-V 64-bit Release", "target": "template_release", "platform": "linux", "arch": "rv64"},
-              ])
-
-          if "${{ inputs.build_android }}" == "true":
-              matrix["include"].extend([
-                  {"identifier": "android-debug", "os": "ubuntu-22.04", "name": "\U0001f916 Android Debug", "target": "template_debug", "platform": "android", "arch": "arm64"},
-                  {"identifier": "android-release", "os": "ubuntu-22.04", "name": "\U0001f916 Android Release", "target": "template_release", "platform": "android", "arch": "arm64"},
               ])
 
           with open(os.environ["GITHUB_OUTPUT"], "a") as f:
