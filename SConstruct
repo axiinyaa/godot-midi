@@ -10,7 +10,7 @@ def validate_parent_dir(key, val, env):
     if not os.path.isdir(normalize_path(os.path.dirname(val), env)):
         raise UserError("'%s' is not a directory: %s" % (key, os.path.dirname(val)))
 
-libname = "godotmidi"
+libname = "-snail"
 projectdir = "game"
 
 localEnv = Environment(tools=["default"], PLATFORM="")

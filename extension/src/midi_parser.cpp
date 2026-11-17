@@ -2,8 +2,6 @@
 
 #include <godot_cpp/core/class_db.hpp>
 
-#include <algorithm>
-
 using namespace godot;
 
 /// @brief override method for registering c++ functions in godot
