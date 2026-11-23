@@ -3,6 +3,16 @@ import os
 import platform
 import shutil
 
+from SCons.Errors import UserError
+from SCons.Script import (
+    ARGUMENTS,
+    Environment,
+    SConscript,
+    Variables,
+)
+from SCons.Variables import BoolVariable, PathVariable
+
+
 def normalize_path(val, env):
     return val if os.path.isabs(val) else os.path.join(env.Dir("#").abspath, val)
 
@@ -11,7 +21,7 @@ def validate_parent_dir(key, val, env):
         raise UserError("'%s' is not a directory: %s" % (key, os.path.dirname(val)))
 
 libname = "-snail"
-projectdir = "game"
+projectdir = "data_builds"
 
 localEnv = Environment(tools=["default"], PLATFORM="")
 

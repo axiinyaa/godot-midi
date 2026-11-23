@@ -42,3 +42,5 @@ extension/src/main/
 extension_api.json
 
 *.exe
+
+data_builds/**

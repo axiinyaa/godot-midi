@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+BUILD_OUT="$HOME/Documents/GitHub/godot-midi/data_builds/addons/godot_midi/bin/linux"
+DEST="$HOME/Documents/GitHub/snails-house-game/addons/lib_snail/bin/linux"
+LIB="lib-snail.linux.template_debug.x86_64.so"
+
+# 1. Build inside the container (the project is mounted at /workspace)
+docker run --rm -it \
+  -v "$PWD:/workspace:Z" \
+  -w /workspace \
+  snail:ubuntu20 \
+  scons -j12 platform=linux target=template_debug debug_symbols=yes
+
+mkdir -p "$DEST"
+cp -f "$BUILD_OUT/$LIB" "$DEST/$LIB"
+echo "Copied file to project."

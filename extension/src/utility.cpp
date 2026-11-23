@@ -1,4 +1,8 @@
 #include "utility.h"
+#include <godot_cpp/classes/engine.hpp>
+#include <godot_cpp/classes/scene_tree.hpp>
+#include <godot_cpp/classes/window.hpp>
+#include <godot_cpp/classes/node.hpp>
 
 /// @brief decode bytes to int from 32 bit big endian stream
 /// @param bytes

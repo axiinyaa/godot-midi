@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Godot Debug",
+    "build": {
+      "command": "./build_debug",
+      "args": [],
+      "cwd": "$ZED_WORKTREE_ROOT"
+    },
+    "program": "/home/axii/.var/app/io.github.MakovWait.Godots/data/godot/app_userdata/Godots/versions/Godot_v4_7_2-stable_linux_x86_64/Godot_v4.7.2-stable_linux.x86_64",
+    "args": ["--editor", "--path", "/home/axii/Documents/GitHub/snails-house-game/"],
+    "request": "launch",
+    "adapter": "CodeLLDB",
+    "stopOnEntry": false,
+    "sourceMap": {
+      "/workspace": "/home/axii/Documents/GitHub/godot-midi/"
+    }
+  }
+]

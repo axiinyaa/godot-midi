@@ -114,6 +114,8 @@ public:
 
         virtual EventType get_type() const = 0;
 
+        double get_time(double delta);
+
     protected:
         int32_t bytes_used;
     };
